@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="icon" type="image/x-icon" href="https://github.com/zenderstorm/ignadoxium/blob/main/zendergoof.png?raw=true">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho' rel='stylesheet'>
+
+<style>
+
+body {
+  text-align: left;
+  font-family: "BIZ UDMincho";
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: rgba(255, 179, 210,0.9);
+  background-image: url("https://i.pinimg.com/originals/a3/21/d0/a321d0accc149c4410d9f65d0e5f1446.gif");
+  background-blend-mode: overlay;
+  background-size:cover;
+  cursor: default;
+}
+
+a:link {
+  text-decoration: none !important;
+  color:black;
+}
+
+a:visited {
+  text-decoration: none !important;
+  color:black;
+}
+
+.cloud{
+  z-index: 10;
+  left:50%;
+  top:50%;
+  position:absolute;
+}
+
+  /* DAYS */
+.monday {
+  position: absolute;
+  background-image: url("https://i.pinimg.com/originals/0d/7a/e8/0d7ae8de480d9fdba2be992987c616e3.gif");  
+  background-size: cover;
+  padding: 1vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  left: 3vw;
+  top: 3vw;
+  bottom: 3vw;
+  right: 82vw;
+  z-index:3;
+    overflow: auto;
+
+}
+
+.tuesday {
+  overflow: auto;
+  position: absolute;
+  background-image: url("https://i.pinimg.com/originals/18/c1/40/18c14059a1d6d710a38d1adf50205b0d.gif");  
+  background-blend-mode: lighten;
+  background-color: rgba(255, 165, 218,0.5);
+  background-size: cover;
+  padding: 1vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  left: 19vw;
+  top: 3vw;
+  bottom: 3vw;
+  right: 66vw;
+  z-index:3;
+}
+
+.wednesday {
+  overflow: auto;
+  position: absolute;
+  background-image: url("https://i.pinimg.com/originals/e5/93/0c/e5930c0b497c76f13373a7fd1f83e257.gif");  
+  background-blend-mode: lighten;
+  background-color: rgba(255, 165, 218,0.7);
+  background-size: cover;
+  padding: 1vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  left: 35vw;
+  top: 3vw;
+  bottom: 3vw;
+  right: 50vw;
+  z-index:3;
+}
+
+.thursday {
+  overflow: auto;
+ position: absolute;
+  background-image: url("https://i.pinimg.com/originals/71/8c/99/718c99b36acc7138d7170f25551da51a.gif");  
+  background-blend-mode: lighten;
+  background-color: rgba(255, 200, 181,0.9);
+  background-size: cover;
+  padding: 1vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  left: 51vw;
+  top: 3vw;
+  bottom: 3vw;
+  right: 34vw;
+  z-index:3;
+}
+
+.friday {
+  overflow: auto;
+  position: absolute;
+  background-image: url("https://i.pinimg.com/originals/61/96/47/619647a3d27b5ee8f42f9dede0732315.gif");  
+  background-blend-mode: lighten;
+  background-color: rgba(255, 165, 218,0.7);
+  background-size: cover;
+  padding: 1vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  left: 67vw;
+  top: 3vw;
+  bottom: 3vw;
+  right: 18vw;
+  z-index:3;
+}
+
+.takenote {
+  position: absolute;
+  left: 83vw;
+  top:3vw;
+  right: 3vw;
+  padding: 1vw;
+}
+
+.monday:hover {
+  transition-timing-function: ease-in-out;
+  transform: scale(1.02)
+}
+.tuesday:hover {
+  transition-timing-function: ease-in-out;
+  transform: scale(1.02)
+}
+.wednesday:hover {
+  transition-timing-function: ease-in-out;
+  transform: scale(1.02)
+}
+.thursday:hover {
+  transition-timing-function: ease-in-out;
+  transform: scale(1.02)
+}
+.friday:hover {
+  transition-timing-function: ease-in-out;
+  transform: scale(1.02)
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+ /* CLASSES */
+ 
+.block {
+  padding: 0.7vw;
+  border-radius:1vw;
+  border-style: solid;
+  border-width: 0.14vw;
+  border-color: #000;
+  z-index: 0;
+  transition: 0.2s;
+}
+.block:hover {
+  transition: 0.1s;
+  transform: translatey(-1vh);
+}
+
+.supplementary {
+  background-color: rgba(255, 209, 236, 0.7);
+}
+.supplementary:hover {
+  background-color: rgba(255, 209, 236, 1);
+}
+
+.core {
+  background-color: rgba(255, 167, 222, 0.5);
+}
+.core:hover {
+  background-color: rgba(255, 167, 222, 1);
+}
+
+.elearning {
+  background-color: rgba(243, 201, 255, 0.4);
+}
+.elearning:hover {
+  background-color: rgba(243, 201, 255, 1);
+}
+
+.wiu {
+  background-color: rgba(255, 158, 175, 0.4);
+}
+.wiu:hover {
+  background-color: rgba(255, 158, 175, 1);
+}
+
+
+
+ /* FORMATS */
+
+.spacer {
+  background-color: rgba(0,0,0,0);
+  padding:0.1vw;
+  font-size: 1vw;
+}
+
+.title {
+  font-size: 2vw;
+}
+
+.classname {
+  font-size:1.5vw;
+  margin:0.5vw;
+
+}
+
+.details {
+  font-size:1vw;
+}
+
+.time {
+  padding: 0.5vw;
+  font-size:1.2vw;
+  border-radius:1vw;
+  border-width: 0.14vw;
+  border-color: #000;
+  margin-top: 0.2vw;
+  margin-bottom: 0.5vw;
+  background-color: rgba(255, 179, 210,0.7);
+  background-image: url("https://i.pinimg.com/originals/6a/65/e5/6a65e54cc543903a11ea4f97bad80dde.gif");
+  background-blend-mode: overlay;
+}
+
+.linkblock {
+  padding: 0.5vw;
+  font-size:1vw;
+  border-radius:1vw;
+  border-width: 0.14vw;
+  margin-top: 0.7vw;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.linkblock:hover {
+  transform: scale(1.05)
+}
+
+#heart{
+  display: none;
+}
+.heartsmall {
+  position: absolute;
+  z-index: 15;
+  height: 5vw;
+  width: 5vw;
+}
+.heartbig {
+  position: absolute;
+  z-index: 15;
+  height: 8vw;
+  width: 8vw;
+}
+.heart1 {top: 5vw; left:5vw;}
+.heart2 {top: 7vw; left:2vw;}
+.heart3 {top: 31vw; left:90vw;}
+.heart4 {top: 25vw; left:85vw;}
+
+#damnation{
+  display:none;
+}
+.damnation{
+  z-index: 100;
+  width: 100vw;
+  height:100vh;
+  top:0vw;
+  left:0vw;
+  position:absolute;
+}
+
+</style>
+</head>
+<body>
+<div id=damnation>
+<img src="https://preview.redd.it/is-this-even-a-real-bird-if-so-what-is-it-v0-sq1scture10d1.jpeg?width=1080&crop=smart&auto=webp&s=f6d188376b4a98de7d0842927f74764efb54a542" class=damnation>
+</div>
+
+<div id="heart">
+<img src="https://i.pinimg.com/originals/6a/3d/6d/6a3d6dc5b12adab072cb0a9c6acbab85.gif" class="heartsmall heart1">
+<img src="https://i.pinimg.com/originals/6a/3d/6d/6a3d6dc5b12adab072cb0a9c6acbab85.gif" class="heartsmall heart2">
+<img src="https://i.pinimg.com/originals/6a/3d/6d/6a3d6dc5b12adab072cb0a9c6acbab85.gif" class="heartsmall heart3">
+<img src="https://i.pinimg.com/originals/6a/3d/6d/6a3d6dc5b12adab072cb0a9c6acbab85.gif" class="heartbig heart4">
+</div>
+
+<div class="monday">
+  <div class="title"><i>monday</i> </div>
+  
+     <div class="spacer"><br></div>
+    
+  <div class="block supplementary"> 
+    <div class="details"><i>Week 2 - 16</i><br></div>
+    <div class="classname"><b>UNDERSTANDING SINGAPORE</b></div>
+    <div class="time">1400 - 1450</div>
+    <div class="details">N1.515<br>DXX297 LAB 03</div>
+      <a href="https://nyplms.polite.edu.sg/d2l/home/652367" target="_blank">
+          <div class="linkblock">Politemall</div>
+  </a>
+  </div>
+    
+  <div class="spacer"><br></div>
+
+  <div class="block elearning"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>3D ASSET <wbr>CREATION</b></div>
+    <div class="time">1600 - 1650</div>
+    <div class="details"><b>E-LEARNING</b><br>DX2201 LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652264" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+   <a href="https://nyp.padlet.org/nicholas_tey/dx2201-3dascr-lab-3-wednesday-1pm-4pm-weekly-progress-e95j74wtwuc3x11g" target="_blank">
+    <div class="linkblock">Padlet</div>
+ </a>
+  </div>
+
+   <div class="spacer"><br></div>
+
+  <div class="block wiu"> 
+    <div class="details"><i>Week 18 - 19</i><br></div>
+    <div class="classname"><b>CINEMATIC <wbr>PRODUCTION</b></div>
+    <div class="time">0900 - 1650<br></div>
+    <div class="details">absolute cinema<br>LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652272" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+  
+
+</div>
+
+
+<div class="tuesday">
+  <div class="title"><i>tuesday</i> </div>
+
+    <div class="spacer"><br></div>
+
+  <div class="block core"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>CHARACTER <wbr>ANIMATION</b></div>
+    <div class="time">0900 - 1150</div>
+    <div class="details">M.306<br>DX2203 LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652267" target="_blank">
+            <div class="linkblock">Politemall</div>
+
+       </a>
+
+  </div>
+
+     <div class="spacer"><br></div>
+
+  <div class="block elearning"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>3D ANIMATION</b></div>
+    <div class="time">1500 - 1550</div>
+    <div class="details"><b>E-LEARNING</b><br>DX2202 LEC 03</div>
+  <a href="https://nyplms.polite.edu.sg/d2l/home/652266" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+
+      <div class="spacer"><br></div>
+      
+  <div class="block supplementary"> 
+    <div class="details"><i>Week 2 - 16</i><br></div>
+    <div class="classname"><b>UNDERSTANDING CONTRACTS AND THE LAW</b></div>
+    <div class="time">1600 -1650</div>
+    <div class="details">LTD-6<br>BMX212 GSM</div>
+ <a href="https://nyplms.polite.edu.sg/d2l/home/652198" target="_blank">
+        <div class="linkblock">Politemall</div>
+</a>
+ </div>
+
+    <div class="spacer"><br></div>
+
+  <div class="block wiu"> 
+    <div class="details"><i>Week 18 - 19</i><br></div>
+    <div class="classname"><b>CINEMATIC <wbr>PRODUCTION</b></div>
+    <div class="time">0900 - 1650<br></div>
+    <div class="details">absolute cinema<br>LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652272" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+
+</div>
+
+<div class="wednesday">
+  <div class="title"><i>wednesday</i> </div>
+    <div class="spacer"><br></div>
+
+  <div class="block core"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>3D ANIMATION</b></div>
+    <div class="time">0900 - 1150</div>
+    <div class="details">M.307<br>DX2202 LAB 03</div>
+  <a href="https://nyplms.polite.edu.sg/d2l/home/652266" target="_blank">
+    <div class="linkblock">Politemall</div>
+ </a>
+   <a href="https://nyp.padlet.org/ken_loh/3dani-lab-3-group-6-fw4yo8jz97a8iqc0" target="_blank">
+    <div class="linkblock">Padlet</div>
+ </a>
+  </div> 
+
+   <div class="spacer"><br></div>
+
+  <div class="block core"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>3D ASSET CREATION</b></div>
+    <div class="time">1300 - 1550</div>
+    <div class="details">M.307<br>DX2201 LAB 03</div>
+ <a href="https://nyplms.polite.edu.sg/d2l/home/652264" target="_blank">
+    <div class="linkblock">Politemall</div>
+   <a href="https://nyp.padlet.org/nicholas_tey/dx2201-3dascr-lab-3-wednesday-1pm-4pm-weekly-progress-e95j74wtwuc3x11g" target="_blank">
+    <div class="linkblock">Padlet</div>
+ </a>
+</a>
+ </div>
+
+        <div class="spacer"><br></div>
+
+    <div class="block supplementary"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>PEM/PCS</b></div>
+    <div class="time">1600 - 1650</div>
+    <div class="details">N1.508<br>DX0010/DXX298 LAB 03</div>
+ <a href="https://nyplms.polite.edu.sg/d2l/home/652368" target="_blank">
+    <div class="linkblock">Politemall</div>
+</a>
+ </div>
+
+        <div class="spacer"><br></div>
+
+  <div class="block wiu"> 
+    <div class="details"><i>Week 18 - 19</i><br></div>
+    <div class="classname"><b>CINEMATIC <wbr>PRODUCTION</b></div>
+    <div class="time">0900 - 1650<br></div>
+    <div class="details">absolute cinema<br>LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652272" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+
+</div>
+
+<div class="thursday">
+  <div class="title"><i>thursday</i> </div>
+
+     <div class="spacer"><br><br><br><br></div>
+     <div class="spacer"><br><br><br><br></div>
+     
+  <div class="block core"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>VISUAL DEVELOPMENT</b></div>
+    <div class="time">1400 - 1550</div>
+    <div class="details">N1.507<br>DX2200 LAB 03</div>
+  <a href="https://nyplms.polite.edu.sg/d2l/home/652265" target="_blank">
+        <div class="linkblock">Politemall</div>
+</a>
+  </div>
+
+     <div class="spacer"><br></div>
+
+  <div class="block wiu"> 
+    <div class="details"><i>Week 18 - 19</i><br></div>
+    <div class="classname"><b>CINEMATIC <wbr>PRODUCTION</b></div>
+    <div class="time">0900 - 1650<br></div>
+    <div class="details">absolute cinema<br>LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652272" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+
+</div>
+
+<div class="friday">
+  <div class="title"><i>friday</i> </div>
+   <div class="spacer"><br></div>
+
+<div class="block core"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>DIGITAL SCULPTING</b></div>
+    <div class="time">0900 - 1050</div>
+    <div class="details">M.411<br>DX2204 LAB 03</div>
+<a href="https://nyplms.polite.edu.sg/d2l/home/652268" target="_blank">
+          <div class="linkblock">Politemall</div>
+  </a>
+</div>
+
+   <div class="spacer"><br></div>
+ 
+ 
+    <div class="block elearning"> 
+    <div class="details"><i>Week 1 - 17</i><br></div>
+    <div class="classname"><b>CHARACTER ANIMATION</b></div>
+    <div class="time">1700 - 1750</div>
+    <div class="details"><b>E-LEARNING</b><br>DX2203 LAB 02</div>
+<a href="https://nyplms.polite.edu.sg/d2l/home/652267" target="_blank">
+        <div class="linkblock">Politemall</div>
+</a>
+</div>
+
+         <div class="spacer"><br></div>
+
+  <div class="block wiu"> 
+    <div class="details"><i>Week 18 - 19</i><br></div>
+    <div class="classname"><b>CINEMATIC <wbr>PRODUCTION</b></div>
+    <div class="time">0900 - 1650<br></div>
+    <div class="details">absolute cinema<br>LAB 03</div>
+    <a href="https://nyplms.polite.edu.sg/d2l/home/652272" target="_blank">
+        <div class="linkblock">Politemall</div>
+    </a>
+  </div>
+           <div class="spacer"><br></div>
+
+      <div class="details">horse named friday<br></div>
+
+</div>
+
+<div class="takenote">
+  <div class="title"><i>notes</i> </div>
+           <div class="spacer"><br></div>
+<div class="details">btw idk if theyre all accurate lol the focus is on the css<br><br>all images r from pinterest. if u look at inspect element i linked them directly (i promise it's neat) </div>
+         <div class="spacer"><br></div>
+         
+<a href="https://mynypportal.nyp.edu.sg/en.html" target="_blank">
+    <div class="linkblock">mynypportal<br></div>
+</a>
+<a href="https://outlook.office365.com/mail/" target="_blank">
+    <div class="linkblock">sch email<br></div>
+</a>
+<a onclick="hearttoggle()">
+    <div class="linkblock">heart toggle<br></div>
+</a>
+<a onclick="damnationtoggle()">
+    <div class="linkblock">damnation<br></div>
+</a>
+
+
+</div>
+
+
+<script>
+function hearttoggle() {
+  var x = document.getElementById("heart");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  }
+
+function damnationtoggle() {
+  var x = document.getElementById("damnation");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  }
+</script>
+</body>
+</html>
