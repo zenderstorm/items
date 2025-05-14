@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho' rel='stylesheet'>
+
+<style>
+body{background-color:black; overflow-y:hidden; font-family:"BIZ UDMincho"}
+
+.together {animation:floatr 10s infinite;}
+
+.background {height:110%; max-height:viewport-height; top:0vw; left:0vw; position:absolute; }
+
+.bscreen {
+  width: 100%; max-width: device-width; height:100%; max-height:viewport-height;
+  position: absolute; z-index: 20; left:0; top: 0; background-color:black;
+  pointer-events: none;
+  animation-name: fade; animation-duration: 3s; animation-timing-function: ease-in; animation-fill-mode: forwards;
+} 
+
+.box {
+border-radius:1vw; background-color:rgba(0,0,0,0); 
+position:absolute; 
+object-fit:contain; animation:pulse 0.5s linear infinite; 
+}
+
+.ellipses {visibility:visible; position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+.ellipses:hover {cursor:pointer;}
+
+.mem1{position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+#mem1 {display:none;position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+.mem2{position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+#mem2 {display:none;position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+.mem3{position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+#mem3 {display:none;position:absolute; background:black; color:white; padding:10px; font-size:15px; white-space:nowrap; z-index:4;}
+
+@keyframes floatr {
+0% {transform: translateY(-2vw)}
+50% {transform: translateY(0vw)}
+100% {transform: translateY(-2vw)}
+}
+
+@keyframes fade {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+@keyframes pulse {
+0% {transform:scale(1.01)}
+100% {transform:scale(1)}
+}
+
+</style>
+</head>
+<body>
+<div class="bscreen">
+	<div style="position:relative; margin:auto; margin-top:45vh; color:white; font-size:15px; text-align:center; font-family:BIZ UDMincho">[ DEDICATION SUCCESS ]</div>
+</div>
+
+<img src="https://github.com/zenderstorm/items/blob/main/saframem.jpg?raw=true" class="background together">
+
+<img style="rotate:-30deg; top:60vh; bottom:10vh; left:180vh; right:5vh; height:70%; mix-blend-mode:overlay;" src="https://github.com/zenderstorm/items/blob/main/safracell_ballroom.gif?raw=true" class="box together">
+
+<a onclick="clickmem2()">
+<div class="ellipses" style="top:75vh; left:200vh;">[ ... ]</div>
+</a>
+
+<div id="mem2" style="position:absolute; top:60vh; left:212vh;">
+	Drip fire with a coat
+    <br>Your smile full of ease
+    <br>Don't say [ I was cringe then ]
+    <br>She's beautiful to me
+    <br>
+    <br>It felt so late
+    <br>But it was just nine
+    <br>Giggling while on our way
+    <br>To make it home in time
+    <br>
+    <br>I hope to remember
+    <br>Through my mind, not pics
+    <br>[ The bad bitch I got
+    <br>from being autistic ]</div>
+
+</body>
+<script>
+function clickmem2() {
+    var x = document.getElementById("mem2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</html>
