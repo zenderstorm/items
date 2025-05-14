@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho' rel='stylesheet'>
+<style>
+
+body{cursor:default; background:rgba(0,0,0,0.7); background-image:url(https://i.pinimg.com/originals/c4/48/57/c448578a1fea7f03bbb22827119b1d49.gif); background-blend-mode:overlay; background-size:cover; repeat:no-repeat; overflow-y:hidden; font-family:"BIZ UDMincho";}
+
+img:hover {border-color:white;}
+a:link {color:white; text-decoration:none;} a:visited {text-decoration:none; color:white;}
+
+.container1:hover {transform:scale(1.02);}
+
+ /*-------- TEXT -------- */
+.hirachael {
+color:white; position:absolute; top:2vw; left:5vw;
+}
+.holyshit {visibility:hidden; position:absolute; background:black; padding:1vw; font-size:15px; white-space:nowrap;}
+
+.hirachael:hover .holyshit {visibility:visible;}
+
+
+ /*-------- huh -------- */
+.container2{border-style:solid; border-color:black; border-width:0vw; border-radius:1vw; position:absolute;
+bottom:5vh; left:5vw; right:85vw; z-index:500}
+
+.help {border: 0.03vw solid white; border-radius:1vw; color:white; display:block; padding:1vh; text-align:center;  font-size:12px;}
+.help:hover {background-color: rgba(255,255,255,0.3)}
+
+#helpdialog {display:none; font-size:10px; padding:1vw; color:white; text-align:left; white-space:nowrap;}
+
+ /*-------- CUBE -------- */
+.cube1 {
+  width:20vw;
+  margin: 7.5vw auto;
+  transform-style: preserve-3d;
+  animation: spintry 7s linear infinite;
+}
+@keyframes spintry {
+0%  {transform: perspective(10cm) rotateX(0deg) rotateY(-360deg)
+	translateY(-5vw);}
+50%  {transform: perspective(20cm) rotateX(180deg) rotateY(-180deg)
+	translateY(-15vw);}    
+100%  {transform: perspective(10cm) rotateX(360deg) rotateY(360deg)
+	translateY(-5vw);}
+}
+.side {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 20vw;
+  object-fit:cove;
+  font-size: 4vw;
+}
+.side:hover {font-size:10vw; cursor:pointer; background-color:rgba(255,255,255,1); border: 0.5vw solid white;}
+.front {transform: translateZ(10vw);}
+.top {transform: rotateX(90deg) translateZ(10vw);}
+.right {transform: rotateY(90deg) translateZ(10vw);}
+.left {transform: rotateY(-90deg) translateZ(10vw);}
+.bottom {transform: rotateX(-90deg) translateZ(10vw);}
+.back {transform: rotateY(-180deg) translateZ(10vw);}
+
+.container1 {
+border-style:solid; border-color:black; border-width:0vw; border-radius:1vw; position:absolute;
+top:35vh; left:5vw; right:5vw;
+}
+
+ /*-------- FORMATS -------- */
+
+.textbox {border:0.03vw solid white; border-radius:1vw; position:absolute; padding:1vw; color:white; }
+
+.titlebox {border:0.03vw solid white; border-radius:1vw; padding:1vw;
+font-size:32px; 
+background-repeat:no-repeat; background-image:url(https://i.pinimg.com/originals/10/96/bf/1096bfd72496b5eb3d1bb6138d37c60a.gif); background-color:rgba(0,0,0,0.6); background-blend-mode:overlay; background-position:center center;}
+
+.dedibox {border:0.03vw solid white; border-radius:1vw; padding:1vw;
+font-size:15px; text-align:center;
+background-repeat:no-repeat; background-image:url(https://i.pinimg.com/originals/10/96/bf/1096bfd72496b5eb3d1bb6138d37c60a.gif); background-color:rgba(0,0,0,0.6); background-blend-mode:overlay; background-position:center center; pointer-events:auto;}
+
+.dedibox:hover {background-color: rgba(255,255,255,0.01);}
+
+.dedibox .details {visibility:hidden; position:absolute; text-align:left; left:-30vw; right:23vw; margin-top:-3vh; background:black; 
+font-size:15px; padding:1vw;}
+
+.dedibox:hover .details {visibility:visible;}
+
+
+ /*-------- CONTENT BROWSWER -------- */
+
+#safra {pointer-events:none; display:none; border:0vw solid white; border-radius:1vw; position:absolute; color:white; 
+left:5vw; right:5vw; top:5vw; bottom:5vw;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container2">
+
+	<a onclick="ellipses()">
+<div class="help"> 
+<div>[ ... ]</div> 
+</div>
+	</a>
+
+<div id="helpdialog">hi lol i hope this site doesnt break<br>if anything goes wrong reload the page trust<br>thank gooness you got a laptop cuh we woulda been cooked with an ipad 😭😭<br>anyway hope you like it?!</div>
+
+</div>
+
+<div class="hirachael">
+	<h2>hi rachael :)</h2>
+    <div class="holyshit" style="left:4vw">holy shit it's your birthday</div>
+    <div class="holyshit" style="left:7vw; top:15vh;">go click on that funny box for a surprise</div>
+
+</div>
+
+<div class="container1">
+  <div class="cube1">
+<img src="https://i.pinimg.com/originals/10/96/bf/1096bfd72496b5eb3d1bb6138d37c60a.gif" class="side front" onclick="safra()">
+
+<img src="https://i.pinimg.com/originals/87/68/c4/8768c4d49a1b54a3a6ab3e48474b2491.gif"class="side back">
+
+<img src="https://i.pinimg.com/originals/ac/1f/62/ac1f6200dbeb9ca5b90cdeec92c1a7da.gif" class="side right">
+
+<img src="https://i.pinimg.com/originals/16/51/a4/1651a4e6639d1926afd2604881df8741.gif"class="side left">
+
+<img src="https://i.pinimg.com/originals/1f/3c/62/1f3c62cbcf4875ef93f1c3f630816c7a.gif" class="side top">
+
+<img src="https://i.pinimg.com/originals/02/fd/3e/02fd3ef4093e64cad8b980ca3d3721a0.gif" class="side bottom">
+</div>
+</div>
+
+<div id="safra">
+	<div class="textbox" style="left:60vw; right:0vw;">
+    <div class="titlebox" style="text-align:right;"><br>SAFRA</div>
+	<div style="margin:1vw; font-size:15px;">
+    <div style="text-align:center"><br></div>
+    <div class="textbox" style=" border-width:0vw !important; white-space:wrap; position:relative;">
+    DEDICATION%: 0.000052 [ MEMORABLE ]<br><br>
+    SUCCESSR%: 99.87 [ ABSOLUTE ]<br><br>
+    PATHOS: POSITIVE / NOSTALGIA / BLISS<br><br>
+    TIMEDIST: 551 SR REF=15-MAY-2025 [ EARTH ]<br><br>
+    KNWNPPL: [ PUBLIC ]<br><br>
+    KNWNPLA: Safra, Choa Chu Kang [ NEAR ]<br><br>
+<br>
+	71 82 65 68 32 78 73<br>
+    71 72 84 32 47 32 50<br>
+    48 50 51 32 47 32 73<br>
+    84 32 70 69 76 84 32<br>
+    83 79 32 76 79 78 71<br>
+    32 65 71 79
+    <br><br>
+    No known potential risks<br>
+    Recommendation: DEDICATE 
+    </div>
+     <div style="text-align:center"><br><i>Dedicate for more info.</i></div>
+    </div>
+    <a href="">
+    <div class="dedibox" style="margin-top:3vw">[[ DEDICATE ]]
+    	<div class="details">DEDICATING will replace [0.000052%] of available cognicell space. This action is NON-REVERSABLE.<br><br>SUCCESS RATE: 99.87% [ABSOLUTE]</div>
+    </div>
+    </a>
+    </div>
+    
+    
+</div>
+
+</body>
+
+<script>
+function ellipses() {
+    var x = document.getElementById("helpdialog");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function safra() {
+    var x = document.getElementById("safra");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</html>
