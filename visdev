@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Supermercado+One" rel="stylesheet">
+<audio loop autoplay>
+  <source src="https://github.com/zenderstorm/ignadoxium/blob/main/yelenskaupit.mp3?raw=true" type="audio/mpeg">
+  [ If you are seeing this, your browser does not support the audio element. ]
+</audio>
+
+<style>
+body{background:black;}
+.bg {animation:floatr 7s infinite;}
+.box {text-align:left; padding:1vw; font-size:16px; color:white; background:rgba(0,0,0,0.6); border: 1px solid white; border-radius:1vw; position:absolute; z-index:10; font-family:BIZ UDMincho; line-height:1.3; overflow:auto;}
+.hover {font-size:16px;}
+.hover:hover{font-size:19px; cursor:pointer;}
+.clickpanel1 .contextboxpanel1 {
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  font-family: 'BIZ UDMincho';
+  color: #fff;
+  text-align: right;
+  top: 28vw;
+  left: 33vw;
+  padding: 7px;
+  z-index: 25;
+  position: absolute;
+  font-size: 10px;
+  white-space: nowrap;
+} 
+.clickpanel1:hover .contextboxpanel1 {
+  visibility: visible;}
+.click {
+  position: absolute;
+  z-index: 20;
+  left: 25.5vw;
+  top: 25.5vw;
+  cursor: pointer;
+}
+
+#box {translate:scale(1); display:block;}
+#panel1 { 
+  transition: .3s ease;
+  
+  max-width: device-width;
+  left: 40vw;
+  top: 5vw;
+  right: 5vw;
+  position: absolute;
+  
+  display: none;
+}
+
+#panel2 {display:none;}
+
+@keyframes floatr {
+0% {transform: translateY(-1vw)}
+50% {transform: translateY(0vw)}
+100% {transform: translateY(-1vw)}
+}
+
+</style>
+</head>
+<body>
+<div  style="left:1vw; bottom:1vw; overflow:auto; position:absolute; z-index:11; font-family:BIZ UDMincho; color:white; text-shadow:2px 2px 2px black;">
+Hello every time you encounter an error reload the page<br>Also you need to be on desktop thanks
+</div>
+
+<div class="clickpanel1">
+  <a onclick="how()">
+    <img style="width: 7.3vw;height: 6vw;" src="https://github.com/zenderstorm/ignadoxium/blob/main/transparent.png?raw=true" class="click">
+    <span class="contextboxpanel1"> [[ ... ]] </span>
+  </a>
+  </div>
+
+<div id="box" class="box" style="left:65vw; right:5vw; top:3vw; overflow:auto;">
+<div style="background-image:url(https://i.pinimg.com/originals/a3/87/45/a38745e519e0e1130213028cf6655c3f.gif); text-align:right; padding:1vw; font-size:16px; color:white; border: 1px solid white; border-radius:1vw; font-size:30px;"> <br><b><i>THE SHROUDED BROADCAST</i></b>
+</div>
+<br>Another day of disbelief has arrived. Notorious pirate and griefer <b>ZYSTAYLOR STARLIGHT</b> remains uncaught by the <b>SPACEREEF COLLECTIVE</b>. As expected, everyone who owns some form of item or property (so everyone then) has to have them clutched lest <b>ZYSTAYLOR</b> will swipe it from under their noses with little difficulty.<br><br>
+If you see this individual <b>CALL THE SPACEREEF COLLECTIVE IMMEDIATELY</b>. Zystaylor also has a homunculus they refer to as their "cat" so if you see any odd creature with their symbol CALL CALL CALL CALL. 
+<br><br>
+Anyway to look for things you should <b>move your mouse</b> around the page until it <b>points</b> at something. When you click on it, and it's <b>ZYSTAYLOR</b>, you know the drill.<br><br>
+Thanks for reading the Shrouded Broadcast. They do not pay me enough to write these daily announcements.<br><br>
+
+<a onclick="okiunderstand()">
+<div class="hover" style="background-image:url(https://i.pinimg.com/originals/a3/87/45/a38745e519e0e1130213028cf6655c3f.gif); text-align:right; padding:1vw; color:white; border: 1px solid white; border-radius:1vw; margin:auto; white-space:nowrap; display: flex; justify-content: center; align-items: center;"><b>Ok I understand</b>
+</div>
+</a>
+</div>
+
+<div id="panel2" style="display:none;">
+<img src="https://github.com/zenderstorm/items/blob/main/four.png?raw=true" style="width:100%;width:40vw;position:absolute; z-index:29; bottom:1vw; right:5vw;">
+
+<div class="box" style="top:65vh; left:5vw; right:5vw; bottom:3vw; overflow:auto; position:absolute; z-index:30; background:black;">
+  ???? What are you doing here<br>
+  Genuinely how did you find my hideout<br><br>
+  ...<br><br>
+  Was it the wires<br><br>
+  Yeah it was the wires
+</div>
+</div>
+
+<img class="bg" style="width:100%; max-width:device-width; position:absolute; top:0; left:0; z-index:5;" src="https://github.com/zenderstorm/items/blob/main/visdev%20cropped%20lalallaa.jpg?raw=true">
+</body>
+
+<script>
+function okiunderstand() {
+  var x = document.getElementById("box");
+  if (x.style.display === "block") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function how() {
+  var x = document.getElementById("panel2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+  var x = document.getElementById("box");
+  if (x.style.display === "block") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</html>
